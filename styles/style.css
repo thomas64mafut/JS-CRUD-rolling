@@ -1,0 +1,9 @@
+.main-div {
+  height: calc(100vh - 8rem);
+  background-color: grey;
+}
+
+.footer-div {
+  background-color: blue;
+  height: 8rem;
+}
