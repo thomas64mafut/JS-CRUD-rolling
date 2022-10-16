@@ -2,6 +2,12 @@
   width: 3rem;
   height: 3rem;
 }
+
+.navbar {
+  height: var(--navbar-height);
+  position: sticky;
+  top: 0;
+}
 .bg-jet {
   background-color: var(--jet);
 }
