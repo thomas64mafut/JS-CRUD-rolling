@@ -1,0 +1,21 @@
+.main-div{
+  height: calc(100vh - var(--navbar-height) - var(--footer-height));
+  background-color: var(--lavender-blush);
+}
+
+.aside {
+  min-height: 20rem;
+}
+
+.content-div div {
+  height: calc(100% / 5);
+  min-height: 6rem;
+}
+
+.footer-div {
+  width: 100%;
+  height: var(--footer-height);
+  background-color: var(--jet-lighter);
+  position: fixed;
+  bottom: 0;
+}
