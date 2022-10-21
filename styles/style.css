@@ -1,4 +1,4 @@
-:root{
+:root {
   --frostbite: rgb(225, 40, 159);
   --jet: rgb(50, 48, 49);
   --jet-lighter: rgb(61, 59, 60);
@@ -6,4 +6,10 @@
   --lavender-blush: rgb(247, 235, 236);
   --footer-height: 6rem;
   --navbar-height: 4rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
