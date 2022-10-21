@@ -5,27 +5,59 @@ p {
 }
 .music-player {
   width: 100%;
-  height: 5rem;
+  height: calc(5rem + 4px);
   background-color: var(--jet-lighter);
   color: white;
 }
 
-.cover-art {
-  background-image: url("../assets/img/coverPlaceholder.jpg");
+.cover {
+  position: relative;
+  width: 6rem;
+  height: 5rem;
+}
+
+.cover img {
+  width: 100%;
   height: 100%;
-  width: 5rem;
-  background-size: contain;
+  object-fit: cover;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
-.song-name {
-  font-size: x-large;
+.song-info {
+  opacity: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 4vw;
 }
 
-.media-controls {
-  padding: 1rem, 2rem, 3rem, 4rem;
+@media (min-width: 462px) {
+  .song-info {
+    font-size: 18px;
+  }
+  
 }
 
-/* From uiverse.io by @Voxybuns */
+.music-player.play .song-info {
+  opacity: 1;
+}
+
+.progress-bar {
+  background-color: var(--pale-silver);
+  height: 4px;
+  cursor: pointer;
+}
+
+.progress {
+  background-color: var(--frostbite);
+  height: 100%;
+  width: 0;
+  transition: width 0.1s linear;
+  border-radius: 0;
+}
+
 .button-animated {
   /* Variables */
   --button_radius: 5rem;
@@ -46,7 +78,14 @@ p {
   background: var(--button_color);
   color: var(--jet);
   transform: translateY(-0.2em);
-  transition: transform 0.1s ease;
+  transition: .1s;
+}
+
+@media (max-width: 312px) {
+  .button_top {
+    padding: 0.1em 0.4em;
+    transition: .1s;
+  }
 }
 
 .button-animated:hover .button_top {
