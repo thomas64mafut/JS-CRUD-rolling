@@ -2,7 +2,7 @@ const tableBody = document.getElementById('tableBody');
 const formAgregarCancion = document.getElementById('formAgregarCancion')
 const editarNombre = document.getElementById('editarNombre')
 const editarArtista = document.getElementById('editarArtista')
-const editarDuracion = document.getElementById('editarDuracion')
+const editaralbum = document.getElementById('editaralbum')
 const formularioAgregar = document.getElementById('formularioAgregar')
 const formularioEdicion = document.getElementById('formularioEdicion')
 var editandoCancion = ''
@@ -23,7 +23,7 @@ formEditarCancion.addEventListener('submit',(e) => {
         nombre: e.target[0].value,
         artista: e.target[1].value,
         categoria: e.target[2].value,
-        duracion: e.target[3].value,
+        album: e.target[3].value,
         id: editandoCancion,
     }
     const cancionesAlmacenadas = JSON.parse(localStorage.getItem('canciones'))
@@ -47,7 +47,7 @@ formAgregarCancion.addEventListener('submit', (e) => {
         nombre: e.target[0].value,
         artista: e.target[1].value,
         categoria: e.target[2].value,
-        duracion: e.target[3].value,
+        album: e.target[3].value,
         id: generateId(),
         }
     const cancionesAlmacenadas = JSON.parse(localStorage.getItem('canciones')) || [];
@@ -79,28 +79,28 @@ const listarCanciones = () => {
     for (const song of canciones) {
         const tr = `
             <tr>
-                <td>${song.nombre}</td>
-                <td>${song.artista}</td>
-                <td>${song.categoria}</td>
-                <td>${song.duracion}</td>
-                <td>   
-                    <button class="noselect buttonDelete" onclick="borrarCancion('${song.id}')">
-                        <span class="text">Eliminar</span>
-                            <span class="icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                    <path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path>
-                                </svg>
-                        </span>
-                    </button> 
-                </td>
-                <td>
-                    <button class="learn-more buttonEdicion" onclick="editarCancion('${song.id}')">
-                        <span class="circle" aria-hidden="true">
-                        <span class="icon arrow"></span>
-                        </span>
-                        <span class="button-text">Editar</span>
-                    </button>
-                </td>
+                    <td class="text-center">${song.nombre}</td>
+                    <td class="text-center">${song.artista}</td>
+                    <td class="text-center">${song.categoria}</td>
+                    <td class="text-center">${song.album}</td>
+                    <td>   
+                        <button class="noselect buttonDelete" onclick="borrarCancion('${song.id}')">
+                            <span class="text">Eliminar</span>
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path>
+                                    </svg>
+                            </span>
+                        </button> 
+                    </td>
+                    <td>
+                        <button class="learn-more buttonEdicion" onclick="editarCancion('${song.id}')">
+                            <span class="circle" aria-hidden="true">
+                                <span class="icon arrow"></span>
+                            </span>
+                            <span class="button-text">Editar</span>
+                        </button>
+                    </td>
             </tr>`
             trs.push(tr)
     }
