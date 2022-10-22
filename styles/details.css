@@ -1,5 +1,5 @@
 .main-div{
-  height: calc(100vh - var(--navbar-height) - var(--footer-height) - 1.6rem);
+  height: calc(100vh - var(--navbar-height) - var(--footer-height) - 1.9rem);
   background-color: var(--lavender-blush);
 }
 

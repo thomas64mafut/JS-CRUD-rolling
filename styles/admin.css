@@ -1,0 +1,265 @@
+:root{
+  --frostbite: rgb(225, 40, 159);
+  --jet: rgb(50, 48, 49);
+  --jet-lighter: rgb(61, 59, 60);
+  --pale-silver: rgb(193, 189, 179);
+  --lavender-blush: rgb(247, 235, 236);
+}
+
+.modalBG{
+  background-color: var(--jet);
+}
+
+.modalBG > .background-image
+
+.modalLetras{
+  color: var(--lavender-blush);
+}
+
+.modal-header{
+  border-bottom: solid var(--frostbite);
+  color: var(--lavender-blush);
+}
+
+
+.borderTable{
+  border: radius 1px;
+  border: var(--frostbite); 
+}
+table{
+  width: 100vw;
+  background: var(--lavender-blush);
+}
+/* Botón de eliminar*/
+.buttonDelete {
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background: var(--jet-lighter);
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+  background: var(--jet-lighter);
+}
+
+.buttonDelete, button span {
+  transition: 200ms;
+}
+
+.buttonDelete .text {
+  transform: translateX(35px);
+  color: white;
+  font-weight: bold;
+}
+
+.buttonDelete .icon {
+  position: absolute;
+  border-left: 1px solid var(--frostbite);
+  transform: translateX(110px);
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonDelete svg {
+  width: 15px;
+  fill: #eee;
+}
+
+.buttonDelete:hover {
+  background: #ff3636;
+}
+
+.buttonDelete:hover .text {
+  color: transparent;
+}
+
+.buttonDelete:hover .icon {
+  width: 150px;
+  border-left: none;
+  transform: translateX(0);
+}
+
+.buttonDelete:focus {
+  outline: none;
+}
+
+.buttonDelete:active .icon svg {
+  transform: scale(0.8);
+}
+
+/* Botón de editar*/
+.buttonEdicion {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.buttonEdicion.learn-more {
+  width: 12rem;
+  height: auto;
+}
+
+.buttonEdicion.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: var(--jet-lighter);
+  border-radius: 1.625rem;
+}
+
+.buttonEdicion.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+
+.buttonEdicion.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+
+.buttonEdicion.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.29rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+
+.buttonEdicion.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: var(--jet-lighter);
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.buttonEdicion:hover .circle {
+  width: 100%;
+}
+
+.buttonEdicion:hover .circle .icon.arrow {
+  background: var(--lavender-blush);
+  transform: translate(1rem, 0);
+} 
+
+.buttonEdicion:hover .button-text {
+  color:var(--lavender-blush);
+}
+
+
+/* Botón Guardar cambios*/
+.buttonCambios {
+  margin: 0;
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+
+.buttonCambios {
+  --border-right: 6px;
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--pale-silver);
+}
+
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--frostbite);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--frostbite);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--frostbite);
+}
+
+.buttonCambios:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--frostbite))
+}
+
+/* Botón agregar canción */
+.buttonAgregarSong {
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  align-items: center;
+  width: auto;
+  height: auto;
+}
+
+.buttonAgregarSong:hover {
+  background-color: var(--jet-lighter);
+  box-shadow: 0px 15px 20px var(--frostbite);
+  color: #fff;
+  transform: translateY(-7px);
+  width: auto;
+  height: auto;
+}
+
+.buttonAgregarSong:active {
+  transform: translateY(-1px);
+  width: auto;
+  height: auto;
+}
+
+.contendedorAgregarSong{
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+}
