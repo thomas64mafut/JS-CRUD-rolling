@@ -13,3 +13,16 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.main-div{
+  height: calc(100vh - var(--navbar-height) - var(--footer-height) - 1.9rem);
+  background-color: var(--lavender-blush);
+}
+
+.footer-div {
+  width: 100%;
+  height: var(--footer-height);
+  background-color: var(--jet-lighter);
+  position: fixed;
+  bottom: 0;
+}

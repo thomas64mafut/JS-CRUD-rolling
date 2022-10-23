@@ -1,12 +1,5 @@
-:root{
-  --frostbite: rgb(225, 40, 159);
-  --jet: rgb(50, 48, 49);
-  --jet-lighter: rgb(61, 59, 60);
-  --pale-silver: rgb(193, 189, 179);
-  --lavender-blush: rgb(247, 235, 236);
-}
 
-.modalBG{
+.modal-content{
   background-color: var(--jet);
 }
 
@@ -23,10 +16,12 @@
   border: radius 1px;
   border: var(--frostbite); 
 }
+
 table{
   width: 100vw;
   background: var(--lavender-blush);
 }
+
 /* Botón de eliminar*/
 .buttonDelete {
   width: 150px;

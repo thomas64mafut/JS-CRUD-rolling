@@ -84,7 +84,7 @@ const listarCanciones = () => {
                     <td class="text-center">${song.categoria}</td>
                     <td class="text-center">${song.album}</td>
                     <td>   
-                        <button class="noselect buttonDelete" onclick="borrarCancion('${song.id}')">
+                        <button class="noselect btn btn-danger" onclick="borrarCancion('${song.id}')">
                             <span class="text">Eliminar</span>
                                 <span class="icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">

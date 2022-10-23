@@ -13,20 +13,15 @@ const title = document.querySelector('#title');
 const artist = document.querySelector('#artist');
 const cover = document.querySelector('#cover');
 
-if (!usersLocalStorage){
-    const filtroUsuariosString = JSON.stringify([nuevoUser]);
-    localStorage.setItem('usuarios',filtroUsuariosString)
-} else {
-    const songs = JSON.parse(localStorage.getItem('canciones'));
-}
+const songs = JSON.parse(localStorage.getItem('canciones'));
 
 let songIndex = 0;
 
 function loadSong(song) {
-    title.innerText = song.title;
-    artist.innerText = song.artist;
-    audio.src = `../assets/audio/hybrid-theory/${song.title}.mp3`
-    cover.src = `../assets/img/${song.title}.jpg`
+    title.innerText = song.nombre;
+    artist.innerText = song.artista;
+    audio.src = `../assets/audio/${song.nombre}.mp3`
+    cover.src = `../assets/img/${song.artista}.jpg`
 }
 
 function pauseSong() {

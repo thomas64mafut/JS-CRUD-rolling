@@ -6,48 +6,46 @@
   <title>Proyecto Rolling</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous"/>
-  <link rel="stylesheet" href="../styles/style.css" />
-  <link rel="stylesheet" href="../styles/admin.css" />
+  <link rel="stylesheet" href="../styles/admin.css"/>
+  <link rel="stylesheet" href="../styles/style.css"/>
 </head>
   <body>
     <nav id="navbar"></nav>
-    <table class="table table-striped-columns borderTable">
-      <thead>
-        <tr>
-          <th scope="col" class="col-2 text-center">Nombre</th>
-          <th scope="col" class="col-2 text-center">Artista</th>
-          <th scope="col" class="col-2 text-center">Albúm</th>
-          <th scope="col" class="col-2 text-center">Género</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody id="tableBody">
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="main-div">
+      <table class="table table-striped-columns borderTable">
+        <thead>
+          <tr>
+            <th scope="col" class="col-2 text-center">Nombre</th>
+            <th scope="col" class="col-2 text-center">Artista</th>
+            <th scope="col" class="col-2 text-center">Albúm</th>
+            <th scope="col" class="col-2 text-center">Género</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
     
-    <div class="contendedorAgregarSong">
-      <button class="buttonAgregarSong" data-bs-toggle="modal" data-bs-target="#formAgregarCancion">
-        Agregar canción
-      </button>
-    </div>  
+      <div class="contendedorAgregarSong">
+        <button class="buttonAgregarSong" data-bs-toggle="modal" data-bs-target="#formAgregarCancion">
+          Agregar canción
+        </button>
+      </div>  
+    </div>
     <footer id="footer-player"></footer>
     <section id="modales">
-
-
+      
       <!-- Modal Agregar-->
       <div class="modal fade" id="formAgregarCancion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
-          <div class="modal-content modalBG">
-            <!-- <div class="modal-header modalBG">
-              <button type="button"class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div> -->
+          <div class="modal-content modal-bg">
             <div class="modal-header">
               <h1 class="modal-title fs-5" id="exampleModalLabel">
                 Datos de la canción
