@@ -37,12 +37,11 @@ if (userId) {
 check.addEventListener('change', (e) => {
     if(e.target.checked){
         $('.collapse').collapse('show');
-        console.log('cerrar');
-    } else
-        $('.collapse').collapse('hide')
         console.log('abrir');
+    } else
+        $('.collapse').collapse('hide');
+        console.log('cerrar');
 });
-
 
 
 
