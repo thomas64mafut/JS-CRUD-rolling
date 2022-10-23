@@ -13,20 +13,12 @@ const title = document.querySelector('#title');
 const artist = document.querySelector('#artist');
 const cover = document.querySelector('#cover');
 
-const songs = [
-    {
-        title: '01. Papercut',
-        artist: 'Linkin Park',
-    },
-    {
-        title: '02. One Step Closer',
-        artist: 'Linkin Park',
-    },  
-    {
-        title: '03. Points of Authority',
-        artist: 'Linkin Park',
-    }, 
-];
+if (!usersLocalStorage){
+    const filtroUsuariosString = JSON.stringify([nuevoUser]);
+    localStorage.setItem('usuarios',filtroUsuariosString)
+} else {
+    const songs = JSON.parse(localStorage.getItem('canciones'));
+}
 
 let songIndex = 0;
 

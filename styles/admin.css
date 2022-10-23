@@ -10,8 +10,6 @@
   background-color: var(--jet);
 }
 
-.modalBG > .background-image
-
 .modalLetras{
   color: var(--lavender-blush);
 }
@@ -20,7 +18,6 @@
   border-bottom: solid var(--frostbite);
   color: var(--lavender-blush);
 }
-
 
 .borderTable{
   border: radius 1px;
