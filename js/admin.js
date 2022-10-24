@@ -5,6 +5,7 @@ const editarArtista = document.getElementById('editarArtista')
 const editaralbum = document.getElementById('editaralbum')
 const formularioAgregar = document.getElementById('formularioAgregar')
 const formularioEdicion = document.getElementById('formularioEdicion')
+const btnAgregarPlaylist = document.querySelector('#btnAgregarPlaylist')
 var editandoCancion = ''
 
 /* let canciones = []; */
@@ -84,7 +85,7 @@ const listarCanciones = () => {
                     <td class="text-center">${song.categoria}</td>
                     <td class="text-center">${song.album}</td>
                     <td>   
-                        <button class="noselect btn btn-danger" onclick="borrarCancion('${song.id}')">
+                        <button class="noselect buttonDelete" onclick="borrarCancion('${song.id}')">
                             <span class="text">Eliminar</span>
                                 <span class="icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -101,12 +102,23 @@ const listarCanciones = () => {
                             <span class="button-text">Editar</span>
                         </button>
                     </td>
+                    <td>
+                        <button class="btn btn-primary" id="btnAgregarPlaylist" onclick="agregarCancionPlaylist('${song.id}')">+</button>
+                    </td>
             </tr>`
             trs.push(tr)
     }
     tableBody.innerHTML = trs.join(' ');
 }
 
-listarCanciones();
 
-{/* <button onclick="editarCancion('${song.id}')"> Editar</button> */}
+const agregarCancionPlaylist = (id) => {
+    console.log('entre flaco');
+    const cancionesObtenidas = JSON.parse(localStorage.getItem('playlist')) 
+    const canciones = JSON.parse(localStorage.getItem('canciones'));
+    const cancionBuscada = canciones.find((song) => song.id === id);
+    cancionesObtenidas.push(cancionBuscada)
+    localStorage.setItem(JSON.stringify(cancionBuscada))
+}
+
+listarCanciones();
