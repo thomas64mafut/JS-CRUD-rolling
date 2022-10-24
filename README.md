@@ -5,3 +5,4 @@ Integrantes del grupo:
   - Lens, Mauricio
   - Mafut, Thomas
 
+Link a la pagina deployeada en netlify: https://music-cloud-rc.netlify.app/
