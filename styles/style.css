@@ -1,7 +1,28 @@
-:root{
+:root {
   --frostbite: rgb(225, 40, 159);
   --jet: rgb(50, 48, 49);
   --jet-lighter: rgb(61, 59, 60);
   --pale-silver: rgb(193, 189, 179);
   --lavender-blush: rgb(247, 235, 236);
+  --footer-height: 5rem;
+  --navbar-height: 4rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.main-div{
+  height: calc(100vh - var(--navbar-height) - var(--footer-height) - 1.9rem);
+  color: var(--lavender-blush);
+  overflow: auto;
+}
+
+.footer-div {
+  width: 100%;
+  height: var(--footer-height);
+  background-color: var(--jet-lighter);
+  position: fixed;
+  bottom: 0;
+  --box-shadow-neon: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
 }

@@ -1,14 +1,16 @@
 console.log('hola pa estoy andando');
 
-const buttons = document.getElementById('buttons');
-const users = JSON.parse(localStorage.getItem('users'));
-const user = JSON.parse(localStorage.getItem('user'));
+const generateId = function () {
+    return '_' + Math.random().toString(36).substr(2, 9);
+}
 
-const logout = () => {
-    localStorage.removeItem('user');
-    return alert('Desconectado con exito')
-};
+const cancionesUser = [];
+localStorage.setItem('songsUser', JSON.stringify(cancionesUser));
+console.log('playlist de user creado');
 
-if (user) {
-    buttons.innerHTML = `<a href="./../index.html" onclick="logout()">Desconectarse</a>`
-};
+const users = JSON.parse(localStorage.getItem('users')) || [{nombre:'admin', email:'admin@mail.com', contrasena:'admin', id: generateId(),}];
+
+console.log(users);
+
+localStorage.setItem('users', JSON.stringify(users));
+console.log('admin creado');

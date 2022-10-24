@@ -1,0 +1,108 @@
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+.music-player {
+  width: 100%;
+  height: calc(5rem + 4px);
+  background-color: var(--jet);
+  color: white;
+}
+
+.cover {
+  position: relative;
+  width: 6rem;
+  height: 5rem;
+}
+
+.cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.song-info {
+  opacity: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 4vw;
+}
+
+@media (min-width: 462px) {
+  .song-info {
+    font-size: 18px;
+  }
+  
+}
+
+.music-player.play .song-info {
+  opacity: 1;
+}
+
+.progress-bar {
+  background-color: var(--pale-silver);
+  height: 4px;
+  cursor: pointer;
+}
+
+.progress {
+  background-color: var(--frostbite);
+  height: 100%;
+  width: 0;
+  transition: width 0.1s linear;
+  border-radius: 0;
+}
+
+.button-animated {
+  /* Variables */
+  --button_radius: 5rem;
+  --button_color: #e8e8e8;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  border-radius: var(--button_radius);
+  background: var(--frostbite);
+}
+
+.button_top {
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--frostbite);
+  border-radius: var(--button_radius);
+  padding: 0.5em 0.7em;
+  background: var(--button_color);
+  color: var(--jet);
+  transform: translateY(-0.2em);
+  transition: .1s;
+}
+
+@media (max-width: 312px) {
+  .button_top {
+    padding: 0.1em 0.4em;
+    transition: .1s;
+  }
+}
+
+.button-animated:hover .button_top {
+  /* Pull the button upwards when hovered */
+  transform: translateY(-0.33em);
+}
+
+.button-animated:active .button_top {
+  /* Push the button downwards when pressed */
+  transform: translateY(0);
+  background-color: var(--pale-silver);
+  transition: 0.1s;
+}
+
+.music-bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

@@ -5,15 +5,15 @@ loginForm.addEventListener('submit', (e) => {
     const users = JSON.parse(localStorage.getItem('users')) || [];
     const userFound = users.find((user) => user.email  === e.target[0].value && user.contrasena === e.target[1].value);
 
-    if (e.target[0].value === 'admin@mail.com' && e.target[1].value === 'admin'){
-        window.location = './adminPage.html';
-        return alert('Sesion iniciada como admin');
-    } else if (!userFound) {
-        localStorage.setItem('user', JSON.stringify(userFound));
-        return alert('Nombre o contrasena incorrectos.');
-    } else {
-        window.location = './userPage.html';
-        return alert('Sesion iniciada como usuario');
-    }
+    if(userFound) {
+        localStorage.setItem('userId', JSON.stringify(userFound.id));
+        if (userFound.email === 'admin@mail.com' && userFound.contrasena === 'admin') {
+            window.location = `../pages/admin.html#${userFound.id}`;
+            return alert('Sesion iniciada como admin');
+        } else {
+            window.location = `./userPage.html#${userFound.id}`;
+            return alert('Sesion iniciada como usuario');
+        }
+    } else return alert('Nombre o contrasena incorrectos.');
 });
 

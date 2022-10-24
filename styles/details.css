@@ -1,0 +1,32 @@
+.main-div{
+  height: calc(100vh - var(--navbar-height) - var(--footer-height) - 1.9rem);
+  background-color: var(--lavender-blush);
+}
+
+.aside {
+  min-height: 25rem;
+  background-color: var(--pale-silver);
+}
+
+.content-div{
+  background-color: var(--lavender-blush);
+}
+
+.content-div div {
+  height: calc(100% / 6);
+  min-height: 6rem;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.footer-div {
+  width: 100%;
+  height: var(--footer-height);
+  background-color: var(--jet-lighter);
+  position: fixed;
+  bottom: 0;
+}
