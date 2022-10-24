@@ -111,7 +111,7 @@ input[type]:checked ~ span.middle {
   box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
 }
 
-.icon {
+.icon-search {
   position: absolute;
   left: 1rem;
   fill: #9e9ea7;

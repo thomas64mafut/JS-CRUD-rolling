@@ -2,6 +2,8 @@ const welcomeMsg = document.querySelector('#welcome-user');
 const adminBtn = document.querySelector('#admin-page-btn');
 const loginBtn = document.querySelector('#login-page-btn');
 
+const check = document.querySelector('#check');
+
 localStorage.setItem('usuarios', JSON.stringify(
     [
         {
@@ -31,6 +33,17 @@ if (userId) {
         adminBtn.classList.remove('d-none');
     }
 }
+
+check.addEventListener('change', (e) => {
+    if(e.target.checked){
+        $('.collapse').collapse('show');
+        console.log('abrir');
+    } else
+        $('.collapse').collapse('hide');
+        console.log('cerrar');
+});
+
+
 
 
 
