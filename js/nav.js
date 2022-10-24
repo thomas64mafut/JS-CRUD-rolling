@@ -1,6 +1,7 @@
 const welcomeMsg = document.querySelector('#welcome-user');
 const adminBtn = document.querySelector('#admin-page-btn');
 const loginBtn = document.querySelector('#login-page-btn');
+const btnLogout = document.querySelector('#btnLogout')
 
 const check = document.querySelector('#check');
 
@@ -9,13 +10,21 @@ const userId = JSON.parse(localStorage.getItem('userId'))
 
 const filtroUsuario = usuarios.find((user) => (user.id === userId));
 
-if (filtroUsuario) {
+if (userId) {
+    btnLogout.classList.remove('d-none')
     welcomeMsg.textContent = `${'Bienvenido, ' + filtroUsuario.nombre + '!'}`
     loginBtn.classList.add('d-none');
     if (filtroUsuario.email === 'admin@mail.com' && filtroUsuario.contrasena === 'admin') {
         adminBtn.classList.remove('d-none');
     }
 }
+
+const logout = () => {
+    localStorage.removeItem('userId');
+    btnLogout.classList.add('d-none')
+    window.location.replace('../index.html');
+    return alert('Desconectado con exito');
+};
 
 check.addEventListener('change', (e) => {
     if(e.target.checked){
@@ -24,9 +33,7 @@ check.addEventListener('change', (e) => {
     } else
         $('.collapse').collapse('hide');
         console.log('cerrar');
+
 });
-
-
-
 
 

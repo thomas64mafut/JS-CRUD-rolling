@@ -1,68 +1,141 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Proyecto Rolling</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link rel="stylesheet" href="../styles/nav.css">
-    <link rel="stylesheet" href="../styles/style.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../styles/nav.css" />
+    <link rel="stylesheet" href="../styles/style.css" />
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark py-3">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
-          <img src="../assets/img/brandlogo-placeholder.png" alt="" style="width: 3rem; height: 3rem;">
-          Navbar</a>
+          <img
+            src="../assets/img/brandlogo-placeholder.png"
+            alt=""
+            style="width: 3rem; height: 3rem"
+          />
+          Navbar</a
+        >
 
-        <label for="check" class="bar navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="toggle animation">
-          <input id="check" type="checkbox">  
+        <label
+          for="check"
+          class="bar navbar-toggler"
+          data-bs-target="#navbarSupportedContent"
+          data-bs-toggle="collapse"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="toggle animation"
+        >
+          <input id="check" type="checkbox" />
           <span class="top"></span>
           <span class="middle"></span>
           <span class="bottom"></span>
         </label>
 
         <div class="collapse navbar-collapse">
-          <ul class="navbar-nav me-auto h-100 mb-0 mb-lg-0 d-flex justify-content-center align-items-center">
+          <ul
+            class="navbar-nav me-auto h-100 mb-0 mb-lg-0 d-flex justify-content-center align-items-center"
+          >
             <li class="nav-item">
-              <p class="nav-link mb-0 disabled" id="welcome-user">Bienvenido, invitado!</p>
+              <p class="nav-link mb-0 disabled" id="welcome-user">
+                Bienvenido, invitado!
+              </p>
             </li>
             <li class="nav-item">
-              <button class="btn btn-primary nav-link px-2 d-none" aria-current="page" href="./admin.html" id="admin-page-btn">
-                <a href="./admin.html" class="text-decoration-none text-black">administracion</a>
+              <button
+                class="btn btn-primary nav-link px-2 d-none"
+                aria-current="page"
+                href="./admin.html"
+                id="admin-page-btn"
+              >
+                <a href="./admin.html" class="text-decoration-none text-black"
+                  >administracion</a
+                >
               </button>
             </li>
             <li class="nav-item">
-              <button class="btn btn-warning nav-link px-2" aria-current="page" href="./login.html" id="login-page-btn">
-                <a href="./login.html" class="text-decoration-none text-black">login</a>
+              <button
+                class="btn btn-warning nav-link px-2"
+                aria-current="page"
+                href="../pages/login.html"
+                id="login-page-btn"
+              >
+                <a href="../pages/login.html" class="text-decoration-none text-black"
+                  >login</a
+                >
               </button>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">catalogo</a>
+              <a class="nav-link" aria-current="page" href="./userPage.html"
+                >catalogo</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">playlists</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">acerca de nosotros</a>
+              <a class="nav-link" href="../index.html">acerca de nosotros</a>
             </li>
           </ul>
           <form class="d-flex justify-content-center w-25" role="search">
             <div class="group">
-              <svg class="icon-search" aria-hidden="true" viewbox="0 0 24 24"><g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g></svg>
-              <input placeholder="busca una cancion..." type="search" class="input text-center">
+              <svg class="icon-search" aria-hidden="true" viewbox="0 0 24 24">
+                <g>
+                  <path
+                    d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"
+                  ></path>
+                </g>
+              </svg>
+              <input
+                placeholder="busca una cancion..."
+                type="search"
+                class="input text-center"
+              />
             </div>
           </form>
+          <button class="btn btn-danger d-none" id="btnLogout" onclick="logout()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-box-arrow-right"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"
+              />
+              <path
+                fill-rule="evenodd"
+                d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"
+              />
+            </svg>
+          </button>
         </div>
-        
       </div>
-    </nav> 
+    </nav>
   </body>
   <section id="scripts">
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
     <script src="../js/nav.js"></script>
   </section>
 </html>
-
