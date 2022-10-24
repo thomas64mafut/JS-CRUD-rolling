@@ -9,15 +9,12 @@
 }
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
 .main-div{
   height: calc(100vh - var(--navbar-height) - var(--footer-height) - 1.9rem);
   color: var(--lavender-blush);
-  background-color: var(--jet-lighter);
 }
 
 .footer-div {
