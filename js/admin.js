@@ -23,8 +23,8 @@ formEditarCancion.addEventListener('submit',(e) => {
     const cancion = {
         nombre: e.target[0].value,
         artista: e.target[1].value,
-        categoria: e.target[2].value,
-        album: e.target[3].value,
+        album: e.target[2].value,
+        genero: e.target[3].value,
         id: editandoCancion,
     }
     const cancionesAlmacenadas = JSON.parse(localStorage.getItem('canciones'))
