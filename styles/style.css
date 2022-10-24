@@ -16,7 +16,8 @@
 
 .main-div{
   height: calc(100vh - var(--navbar-height) - var(--footer-height) - 1.9rem);
-  background-color: var(--lavender-blush);
+  color: var(--lavender-blush);
+  background-color: var(--jet-lighter);
 }
 
 .footer-div {

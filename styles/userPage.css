@@ -1,0 +1,16 @@
+.row {
+    z-index: 1;
+}
+
+.aside {
+    background-color: var(--pale-silver);
+}
+
+.aside > h5, .aside ul {
+    color: var(--jet);
+}
+
+.carousel {
+    height: 40rem;
+    background-color: black;
+}
