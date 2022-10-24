@@ -1,12 +1,17 @@
 const registerForm = document.getElementById('registerForm');
 
+const generateId = function () {
+    return '_' + Math.random().toString(36).substr(2, 9);
+}
+
 registerForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    const users = JSON.parse(localStorage.getItem('users')) || [admin = {nombre:'admin', email:'admin@mail.com', contrasena:'admin'}];
+    const users = JSON.parse(localStorage.getItem('users')) || [admin = {nombre:'admin', email:'admin@mail.com', contrasena:'admin', id:generateId()}];
     const user = {
         nombre: e.target[0].value,
         email: e.target[1].value,
         contrasena: e.target[2].value,
+        id: generateId(),
     }
     
     const alreadyExist = users.some((u) => u.email === user.email);
