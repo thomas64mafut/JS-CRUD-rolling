@@ -47,7 +47,7 @@ input[type = "checkbox"] {
   left: 0;
 }
 
-.bar span.top {
+.bar span.top-nav {
   top: 0;
 }
 
@@ -59,7 +59,7 @@ input[type = "checkbox"] {
   bottom: 0;
 }
 
-input[type]:checked ~ span.top {
+input[type]:checked ~ span.top-nav {
   transform: rotate(45deg);
   transform-origin: top left;
   width: 48px;

@@ -18,10 +18,12 @@ const songs = JSON.parse(localStorage.getItem('canciones'));
 let songIndex = 0;
 
 function loadSong(song) {
-    title.innerText = song.nombre;
-    artist.innerText = song.artista;
-    audio.src = `../assets/audio/${song.nombre}.mp3`
-    cover.src = `../assets/img/${song.artista}.jpg`
+    if(song){
+        title.innerText = song.nombre;
+        artist.innerText = song.artista;
+        audio.src = `../assets/audio/${song.nombre}.mp3`
+        cover.src = `../assets/img/${song.artista}.jpg`
+    }
 }
 
 function pauseSong() {
@@ -75,6 +77,7 @@ function setProgress(e) {
 }
 
 playBtn.addEventListener('click', () => {
+    loadSong(songs[songIndex]);
     const isPlaying = musicPlayer.classList.contains('play');
 
     if (isPlaying) {
@@ -89,4 +92,4 @@ nextBtn.addEventListener('click', nextSong);
 audio.addEventListener('timeupdate', updateProgress);
 progressBar.addEventListener('click', setProgress);
 audio.addEventListener('ended', nextSong);
-loadSong(songs[songIndex]);
+

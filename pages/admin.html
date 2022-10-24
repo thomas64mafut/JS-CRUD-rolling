@@ -9,15 +9,16 @@
   <link rel="stylesheet" href="../styles/admin.css" />
 </head>
 <body>
-  <main>
-      <nav id="navbar"></nav>
-      <table class="container">
+  <nav id="navbar"></nav>
+  <main class="main-div">
+      <table class="container container-fluid mb-3 mt-3">
         <thead>
           <tr>
             <th><h1>Nombre</h1></th>
             <th><h1>Artista</h1></th>
-            <th><h1>Genero</h1></th>
             <th><h1>Albúm</h1></th>
+            <th><h1>Genero</h1></th>
+            <th></th>
             <th></th>
             <th></th>
           </tr>
@@ -31,7 +32,7 @@
         </button>
       </div>  
     </main>
-    <footer id="footer-player"></footer>
+    <footer id="footer-player" class="footer-div"></footer>
     <section id="modales">
       <!-- Modal Agregar-->
       <div class="modal fade" id="formAgregarCancion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -58,16 +59,16 @@
                   <input type="text" class="form-control" id="artistaCrearCancion"/>
                 </div>
                 <div class="mb-2 col-12">
-                  <label for="generoCrearCancion" class="form-label text-white">
-                    Género de la canción
-                  </label>
-                  <input type="text" class="form-control" id="generoCrearCancion" aria-describedby="emailHelp"/>
-                </div>
-                <div class="mb-2 col-12">
                   <label for="albumCrearCancion" class="form-label text-white" >
                     Albúm
                   </label>
                   <input type="text" class="form-control" id="albumCrearCancion" aria-describedby="emailHelp"/>
+                </div>
+                <div class="mb-2 col-12">
+                  <label for="generoCrearCancion" class="form-label text-white">
+                    Género de la canción
+                  </label>
+                  <input type="text" class="form-control" id="generoCrearCancion" aria-describedby="emailHelp"/>
                 </div>
                 <button data-text="Awesome" class="buttonCambios" type="submit" data-bs-dismiss="modal">
                   <span class="actual-text">
@@ -107,16 +108,16 @@
                   <input type="text" class="form-control" id="artistaEditarCancion"/>
                 </div>
                 <div class="mb-2 col-12">
-                  <label for="generoEditarCancion" class="form-label text-white">
-                    Género de la canción
-                  </label>
-                  <input type="text" class="form-control" id="generoEditarCancion" aria-describedby="emailHelp"/>
-                </div>
-                <div class="mb-2 col-12">
                   <label for="albumEditarCancion" class="form-label text-white">
                     Albúm
                   </label>
                   <input type="text" class="form-control" id="albumEditarCancion" aria-describedby="emailHelp"/>
+                </div>
+                <div class="mb-2 col-12">
+                  <label for="generoEditarCancion" class="form-label text-white">
+                    Género de la canción
+                  </label>
+                  <input type="text" class="form-control" id="generoEditarCancion" aria-describedby="emailHelp"/>
                 </div>
                 <button data-text="Awesome" class="buttonCambios" type="submit" data-bs-dismiss="modal">
                   <span class="actual-text">

@@ -6,7 +6,7 @@ p {
 .music-player {
   width: 100%;
   height: calc(5rem + 4px);
-  background-color: var(--jet-lighter);
+  background-color: var(--jet);
   color: white;
 }
 

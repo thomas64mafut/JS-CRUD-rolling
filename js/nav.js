@@ -14,9 +14,6 @@ if (userId) {
     btnLogout.classList.remove('d-none')
     welcomeMsg.textContent = `${'Bienvenido, ' + filtroUsuario.nombre + '!'}`
     loginBtn.classList.add('d-none');
-    if (filtroUsuario.email === 'admin@mail.com' && filtroUsuario.contrasena === 'admin') {
-        adminBtn.classList.remove('d-none');
-    }
 }
 
 const logout = () => {

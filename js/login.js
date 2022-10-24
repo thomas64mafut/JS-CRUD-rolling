@@ -6,9 +6,7 @@ loginForm.addEventListener('submit', (e) => {
     const userFound = users.find((user) => user.email  === e.target[0].value && user.contrasena === e.target[1].value);
 
     if(userFound) {
-        const cancionesUser = [];
-        localStorage.setItem('songsUser', JSON.stringify(cancionesUser));
-        localStorage.setItem('userId', JSON.stringify(userFound.id))
+        localStorage.setItem('userId', JSON.stringify(userFound.id));
         if (userFound.email === 'admin@mail.com' && userFound.contrasena === 'admin') {
             window.location = `../pages/admin.html#${userFound.id}`;
             return alert('Sesion iniciada como admin');

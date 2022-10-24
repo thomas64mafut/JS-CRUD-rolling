@@ -6,7 +6,7 @@ const generateId = function () {
 
 registerForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    const users = JSON.parse(localStorage.getItem('users')) || [admin = {nombre:'admin', email:'admin@mail.com', contrasena:'admin', id:generateId()}];
+    const users = JSON.parse(localStorage.getItem('users'));
     const user = {
         nombre: e.target[0].value,
         email: e.target[1].value,

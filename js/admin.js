@@ -47,8 +47,8 @@ formAgregarCancion.addEventListener('submit', (e) => {
         const cancion = {
         nombre: e.target[0].value,
         artista: e.target[1].value,
-        categoria: e.target[2].value,
-        album: e.target[3].value,
+        album: e.target[2].value,
+        genero: e.target[3].value,
         id: generateId(),
         }
     const cancionesAlmacenadas = JSON.parse(localStorage.getItem('canciones')) || [];
@@ -73,8 +73,6 @@ const editarCancion = (id) =>{
     formularioEdicion.reset();
 }
 
-
-
 const listarCanciones = () => {
     const trs = [];
     const canciones = JSON.parse(localStorage.getItem('canciones'));
@@ -88,10 +86,10 @@ const listarCanciones = () => {
                         ${song.artista}
                     </td>
                     <td class="text-center">
-                        ${song.categoria}
+                        ${song.album}
                     </td>
                     <td class="text-center">
-                        ${song.album}
+                        ${song.genero}
                     </td>
                     <td>   
                         <button type="button" class="btn btn-dark" onclick="borrarCancion('${song.id}')">
@@ -110,7 +108,12 @@ const listarCanciones = () => {
                         </button>
                     </td>
                     <td>
-                        <button class="btn btn-primary" id="btnAgregarPlaylist" onclick="agregarCancionPlaylist('${song.id}')">+</button>
+                        <button class="btn btn-primary" id="btnAgregarPlaylist" onclick="agregarCancionPlaylist('${song.id}')">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+                        </svg>
+                        <span class="d-none d-sm-block">Add</span> 
+                      </button>
                     </td>
             </tr>`
             trs.push(tr)

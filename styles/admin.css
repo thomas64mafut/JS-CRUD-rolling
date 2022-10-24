@@ -1,9 +1,9 @@
-:root{
-  --frostbite: rgb(225, 40, 159);
-  --jet: rgb(50, 48, 49);
-  --jet-lighter: rgb(61, 59, 60);
-  --pale-silver: rgb(193, 189, 179);
-  --lavender-blush: rgb(247, 235, 236);
+.main-div {
+  background-color: var(--jet-lighter);
+}
+
+.filtro {
+  display: none;
 }
 
 .modalBG{
@@ -21,7 +21,6 @@
   color: var(--lavender-blush);
 }
 
-
 .borderTable{
   border: var(--frostbite); 
 }
@@ -34,10 +33,9 @@
 }
 
 table{
-  max-width: 80vw;
+  max-width: 100vw;
 
 }
-
 
 /* Botón Guardar cambios*/
 .buttonCambios {
@@ -126,7 +124,7 @@ table{
 .container {
   text-align: center;
   overflow: hidden;
-  width: 95%;
+  width: 100%;
   margin: 0 auto;
   display: table;
   padding: 0 0 8em 0;
