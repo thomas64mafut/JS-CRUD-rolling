@@ -74,32 +74,39 @@ const editarCancion = (id) =>{
 }
 
 
+
 const listarCanciones = () => {
     const trs = [];
     const canciones = JSON.parse(localStorage.getItem('canciones'));
     for (const song of canciones) {
         const tr = `
             <tr>
-                    <td class="text-center">${song.nombre}</td>
-                    <td class="text-center">${song.artista}</td>
-                    <td class="text-center">${song.categoria}</td>
-                    <td class="text-center">${song.album}</td>
+                    <td class="text-center">
+                        ${song.nombre}
+                    </td>
+                    <td class="text-center">
+                        ${song.artista}
+                    </td>
+                    <td class="text-center">
+                        ${song.categoria}
+                    </td>
+                    <td class="text-center">
+                        ${song.album}
+                    </td>
                     <td>   
-                        <button class="noselect buttonDelete" onclick="borrarCancion('${song.id}')">
-                            <span class="text">Eliminar</span>
-                                <span class="icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                        <path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path>
-                                    </svg>
-                            </span>
+                        <button type="button" class="btn btn-dark" onclick="borrarCancion('${song.id}')">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                            <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+                            </svg>
+                            <span class="d-none d-sm-block">Eliminar</span>
                         </button> 
                     </td>
                     <td>
-                        <button class="learn-more buttonEdicion" onclick="editarCancion('${song.id}')">
-                            <span class="circle" aria-hidden="true">
-                                <span class="icon arrow"></span>
-                            </span>
-                            <span class="button-text">Editar</span>
+                        <button type="button" class="btn btn-light" onclick="editarCancion('${song.id}')">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+                            <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
+                            </svg>
+                            <span class="d-none d-sm-block">Editar</span>
                         </button>
                     </td>
                     <td>
