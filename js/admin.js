@@ -112,12 +112,11 @@ const listarCanciones = () => {
 }
 
 const agregarCancionPlaylist = (id) => {
-    const cancionesObtenidas = JSON.parse(localStorage.getItem('user'));
+    const cancionesObtenidas = JSON.parse(localStorage.getItem('songsUser'));
     const canciones = JSON.parse(localStorage.getItem('canciones'));
     const cancionBuscada = canciones.find((song) => song.id === id);
-    console.log(cancionBuscada);
     cancionesObtenidas.push(cancionBuscada)
-    localStorage.setItem('user',JSON.stringify(cancionesObtenidas))
+    localStorage.setItem('songsUser',JSON.stringify(cancionesObtenidas));
 }
 
 listarCanciones();
