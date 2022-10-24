@@ -4,32 +4,15 @@ const loginBtn = document.querySelector('#login-page-btn');
 
 const check = document.querySelector('#check');
 
-localStorage.setItem('usuarios', JSON.stringify(
-    [
-        {
-            nombre: 'thomas',
-            email: 'thomas@mail.com',
-            contrasena: '1234',
-        },
-        {
-            nombre: 'admin',
-            email: 'admin@mail.com',
-            contrasena: 'admin',
-        },
-    ]
-));
+const usuarios = JSON.parse(localStorage.getItem('users'));
+const userId = JSON.parse(localStorage.getItem('userId'))
 
-const usuarios = JSON.parse(localStorage.getItem('usuarios'));
-const userId = usuarios[1] 
-console.log(usuarios);
-console.log(userId);
+const filtroUsuario = usuarios.find((user) => (user.id === userId));
 
-const filtroUsuario = usuarios.find((user) => (user.nombre === userId.nombre));
-
-if (userId) {
-    welcomeMsg.textContent = `${'Bienvenido, ' + userId.nombre + '!'}`
+if (filtroUsuario) {
+    welcomeMsg.textContent = `${'Bienvenido, ' + filtroUsuario.nombre + '!'}`
     loginBtn.classList.add('d-none');
-    if (userId.email === 'admin@mail.com' && userId.contrasena === 'admin') {
+    if (filtroUsuario.email === 'admin@mail.com' && filtroUsuario.contrasena === 'admin') {
         adminBtn.classList.remove('d-none');
     }
 }
